@@ -17,6 +17,12 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Connect burgers_controller.js file
+// Import routes to connect burgers_controller.js file
+const routes = require("./controllers/burgers_controller.js");
+app.use(routes);
 
-
+// Start server to listen to client requests
+app.listen(PORT, function () {
+    // Notification to confirm server 
+    console.log("Server listening on: http://localhost:" + PORT);
+  });
