@@ -1,7 +1,8 @@
 // Use Express
 const express = require('express');
-const PORT = process.env.PORT || 3000;
+
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Set up the public directory for the app
 app.use(express.static("public"));
