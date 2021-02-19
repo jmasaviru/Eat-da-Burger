@@ -1,6 +1,8 @@
 // Handlers attached once DOM is fully loaded
-$(".devoured").on("click", (e) => {
+$(() => {
+  $(".devour").on("click", (event) => {
     var id = $(this).data("id");
+    var newDevoured = $(this).data("newdevoured");
 
     var devouredState = {
         devoured: newDevoured,
@@ -16,14 +18,15 @@ $(".devoured").on("click", (e) => {
       });
     });
 
-$(() => {
-    $(".create-form").on("submit", (e) => {
-        e.preventDefault();
-
-        var newBurger = {
-            name: $("#burgr").val().trim(),
+    $(".create-form").on("submit", (event) => {
+      // Prevent default
+      event.preventDefault();
+      
+      var newBurger = {
+        name: $("#burgr").val().trim(),
     };
     console.log(newBurger);
+
     // Send POST request.
     $.ajax("/api/burgers", {
         type: "POST",
@@ -32,19 +35,7 @@ $(() => {
         console.log("New Burger Created!", newBurger);
         // Reload page for updated list
       location.reload();
-    });
-  });
-  
-  $(".deleteburger").on("click", (e) => {
-    var id = $(this).data("id");
-
-    // Send DELETE request.
-    $.ajax("/api/burgers" + id, {
-      type: "DELETE",
-    }).then(() => {
-      console.log("Burger deleted!", id);
-      // Reload page for updated list
-      location.reload();
-    });
+    }
+    );
   });
 });
