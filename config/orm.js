@@ -2,26 +2,27 @@
 var connection = require("../config/connection.js");
 
 // Helper functions for MySQL syntax
-function questionMarks (num) {
-    var array = [];
-    for (var i = 0; i < num; i++){
-        array.push("?");
+function questionMarks(num) {
+    var arr = [];
+    for (var i = 0; i < num; i++) {
+        arr.push("?");
     }
-    return array.toString();
+    return arr.toString();
 }
 
 // Helper function to convert Object key to SQL syntax
  function objToSql(ob){
-    var array = [];
+    var arr = [];
     for (var key in ob) {
       var value = ob[key];
+
       // Skip hidden properties
       if (Object.hasOwnProperty.call(ob, key)){
         // Add quotes for spaced string
-        if (typeof value === "string" && value.indexOf(" ") >= 0){
+        if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        array.push(key + "=" + value + "'")
+        arr.push(key + "=" + value)
       }
     }
     // Array of strings translated into one string
@@ -29,7 +30,7 @@ function questionMarks (num) {
   }
   // Object Relational Mapper
   var orm = {
-    selectAll: (tableInput, cb) => {
+    all: (tableInput, cb) => {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, (err, result) => {
         if (err) {
@@ -38,8 +39,8 @@ function questionMarks (num) {
         cb(result);
       });
     },
-    // Function that inserts new data in Burgers Table
-    insertOne: (table, cols, vals, cb) => {
+    // Function that creates new Burgers in menu
+    create: (table, cols, vals, cb) => {
       var queryString = "INSERT INTO " + table;
       queryString += " (";
       queryString += cols.toString();
@@ -57,7 +58,8 @@ function questionMarks (num) {
       });
     },
     
-    updateOne: (table, objColVals, condition, cb) => {
+    // Function to update existing burger
+    update: (table, objColVals, condition, cb) => {
       var queryString ="UPDATE " + table;
       queryString += " SET ";
       queryString += objToSql(objColVals);
@@ -69,6 +71,21 @@ function questionMarks (num) {
         if (err) {
           throw err;
         }
+        cb(result);
+      });
+    },
+
+    // Function to delete burger
+    delete: (table, condition, cb) => {
+      var queryString = "DELETE FROM " + table;
+      queryString += " WHERE ";
+      queryString += condition;
+  
+      connection.query(queryString, (err, result) => {
+        if (err) {
+          throw err;
+        }
+  
         cb(result);
       });
     }
