@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
 
 //POST method for new burger in the menu
 router.post("/", (req,res) => {
-    burger.create(["burger_name"], [req.body.burger_name], (result) => {
+    burger.create(["burger"], [req.body.burger], (result) => {
         console.log('Updated');
         res.redirect("/");
     });
