@@ -10,25 +10,26 @@ var burger = {
   },
 
   // Creating a new burger 
-  create: (cols, vals, cb) => {
-      orm.create("burgers", cols, vals, (res) => {
+  create: (name, cb) => {
+      orm.create("burgers", name, (res) => {
           cb(res);
       });
   },
 
   // Updating a devoured burger
-  update: (objColVals, condition, cb) => {
-    orm.update("burgers", objColVals, condition, (res) => {
+  update: (id, devoured, cb) => {
+    orm.update("burgers", id, devoured, (res) => {
       cb(res);
     });
   },
 
   // Deleting a burger 
-  delete: (condition, cb) => {
-    orm.delete("burgers", condition, (res) => {
+  delete: (id, cb) => {
+    orm.delete("burgers", id, (res) => {
       cb(res);
     });
   }
 };
 
+// Export database functions
 module.exports = burger;
