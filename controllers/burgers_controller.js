@@ -1,6 +1,6 @@
 // Importing Express
-const express = require("express");
-const router = express.Router();
+var express = require("express");
+var router = express.Router();
 
 // Importing burger.js Model
 const burger = require("../models/burger.js");
@@ -17,34 +17,35 @@ router.get("/", (req, res) => {
 });
 
 //POST method for new burger in the menu
-router.post("/", (req,res) => {
-    burger.create(["burger"], [req.body.burger], (result) => {
+router.post("/api/burgers", (req, res) => {
+    burger.create(`${req.body.name}`, (response) => {
         console.log('Updated');
-        res.redirect("/");
+        res.status(200).end();
     });
 });
 
 // PUT method to update menu
-router.put("/:id", (req,res) => {
-    var condition = "id = " + req.params.id;
-  
-   console.log("condition", condition);
+router.put("/api/burgers/:id", (req, res) => {
 
-   burger.update({ devoured: req.body.devoured }, condition, (result) => {
+    var id = req.params.id;
+  
+   console.log("the id is" + id);
+   console.log(req.body.devoured);
+   burger.update({ devoured: req.body.devoured }, (result) => {
     if (result.changedRows == 0){
          // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
       } else {
-        res.status(200).end();
+        return res.status(200).end();
       }
    });
 });
 
 // Delete Burger from menu
 router.delete("/api/burgers/:id", (req, res) => {
-  var condition = "id = " + req.params.id;
+  var id = req.params.id;
 
-  burgers.delete(condition, (result) => {
+  burgers.delete(id, (result) => {
     if (result.affectedRows == 0) {
       return res.status(404).end();
     } else {
