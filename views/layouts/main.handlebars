@@ -2,32 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burgerland</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./assets/js/eatDaBurger.js"></script>
 
-    <script src="/assets/js/burgers.js"></script>
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css%22%3E"/>
-    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+	<title>Burger House</title>
 </head>
 
 <body>
-    {{{ body }}}
+	<div class="container">
+		<div class="jumbotron" id="header">
+			<div class="img-fluid">
+				<img src="./assets/images/restaurant01.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col md 5"></div>
+			<div class="col md 2">
+				<form class="create-form">
+					<div class="form-group" id="burger-form">
+						<span class="create">Create a burger you would like to eat and hit submit!</span>
+						<input type="text" class="form-control" name="name" placeholder="Name of Burger" id="burgerInput">
+						<button type="submit" class="btn btn-primary" id="submit">Submit</button>
+					</div>
+				</form>
+			</div>
+			<div class="col md 5"></div>
+		</div>
+		<div class="container">
+			{{{ body }}}
+		</div>
 </body>
 
 </html>
-
