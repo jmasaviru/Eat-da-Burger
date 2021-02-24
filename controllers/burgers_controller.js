@@ -9,16 +9,15 @@ const burger = require("../models/burger.js");
 // GET method
 router.get("/", (req, res) => {
     burger.all((data) => {
-        console.log(data);
-        var hbsObject = {burgers: data};
-        console.log(hbsObject);
-    res.render("index", hbsObject);
+        var hbsObj = {burgers: data};
+        console.log(hbsObj);
+    res.render("index", hbsObj);
   });
 });
 
 //POST method for new burger in the menu
 router.post("/api/burgers", (req, res) => {
-    burger.create(`${req.body.name}`, (response) => {
+    burger.create(`${req.body.name}`, function (response) {
         console.log('Updated');
         res.status(200).end();
     });
@@ -31,7 +30,7 @@ router.put("/api/burgers/:id", (req, res) => {
   
    console.log("the id is" + id);
    console.log(req.body.devoured);
-   burger.update({ devoured: req.body.devoured }, (result) => {
+   burger.update(id, req.body.devoured, (result) => {
     if (result.changedRows == 0){
          // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
