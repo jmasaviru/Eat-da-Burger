@@ -2,6 +2,7 @@
 var orm = require("../config/orm.js");
 
 var burger = {
+  
   //Selecting all burgers
   all: (cb) => {
     orm.all("burgers", (res) => {
