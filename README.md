@@ -9,7 +9,7 @@ A restaurant application that allows the user to input names of burgers and "dev
   4. [License](#license)
   5. [Links](#links)
   
-  ## Technologies
+## Technologies
   
   * HTML
   * Config.json
@@ -19,7 +19,7 @@ A restaurant application that allows the user to input names of burgers and "dev
   * Heroku
   * MySQL
   
-  ## Usage
+## Usage
 
   The user can run the live application through the [Heroku link](https://burgerh0use.herokuapp.com/) provided.
   The user can also run the application locally by first installing the application by cloning the repository onto their machine by running the `git clone` command, and then run `npm install` to install the required dependencies. The user should then navigate on the terminal to the folder where it is contained then run `node server.js`. The user may also make use of the provided schema and seeds files to populate some burgers.
@@ -33,14 +33,15 @@ A restaurant application that allows the user to input names of burgers and "dev
 
   >The burgers above have been generated with the corresponding user input. They can be 'devoured' repeatedly or deleted. 
 
-  ## Contribution
 
-  - [James Masaviru](https://github.com/jmasaviru)
-  - [Linkedin](https://www.linkedin.com/in/james-masaviru-ba0a2117/)
+## Contribution
+
+- [James Masaviru](https://github.com/jmasaviru)
+- [Linkedin](https://www.linkedin.com/in/james-masaviru-ba0a2117/)
   
-   ## License
+## License
 
-  *  ![License badge](https://img.shields.io/badge/License-MIT-green)
+*  ![License badge](https://img.shields.io/badge/License-MIT-green)
 
 ## Links
 
