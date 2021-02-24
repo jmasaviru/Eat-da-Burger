@@ -1,0 +1,88 @@
+/* Header background*/
+.img-fluid {
+    max-width: 100%;
+    max-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;;
+}
+
+#bkgd-img {
+    opacity: 0.4;
+}
+
+#header {
+    background-color: rgb(233, 222, 222);
+}
+
+body {
+    background-image: url(../images/restaurant5.jpg);
+    justify-content: center;
+}
+
+/* "Devour it" button */
+.change-devour {
+    font-size: 17px;
+    font-family: Marker Felt, fantasy;
+    color: black;
+    background-color: #74bd2f;
+    padding: 3px 6px;
+    border-radius: 12px;
+}
+
+/* Delete button */
+.delete-burger {
+    font-size: 17px;
+    font-family: Marker Felt, fantasy;
+    color: black;
+    background-color: #cc1414;
+    padding: 3px 6px;
+    border-radius: 12px;
+}
+
+/* Burger List */
+#burger-list {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    text-shadow: 3px 3px 3px rgba(205, 203, 203, 0.961);
+    text-align: center;
+}
+
+/* Create Burger section */
+.create {
+    color: #cac1c1;
+    text-shadow: 0px 2px 2px #616161;
+    text-shadow: 0px 1px 1px #dfdfdf;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+/* Burger create form */
+#burger-form {
+    background-color: #020f05;
+    font-size: 50px;
+    font-family: Optima, sans-serif;
+    color: white;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+/* Submit button */
+#submit {
+    font-size: 20px;
+    font-family: Optima, sans-serif;
+    background-color: rgb(226, 177, 13);
+    border-color: #dfdfdf;
+    border-radius: 12px;
+    text-shadow: 0px 2px 2px #171717;
+}
+
+/* Burger Menu  */
+.burger-menu {
+    color: rgba(230, 224, 219, 0.801);
+    font-size: 24px;
+    list-style: none;
+    background-color: #161206;
+    border-radius: 12px;
+    padding: 20px;
+}
