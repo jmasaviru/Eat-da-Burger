@@ -1,7 +1,7 @@
 // Create & Export MYSQL connections
 var mysql = require("mysql");
 
-// Connection to MYSQL db & Heroku connection
+// Connection to MYSQL db & Heroku Connection
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
   } else {
