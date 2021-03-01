@@ -37,7 +37,6 @@ A restaurant application that allows the user to input names of burgers and "dev
 ## Contribution
 
 - [James Masaviru](https://github.com/jmasaviru)
-- [Linkedin](https://www.linkedin.com/in/james-masaviru-ba0a2117/)
   
 ## License
 
@@ -54,3 +53,4 @@ A restaurant application that allows the user to input names of burgers and "dev
 ## Questions
 
   * If you have questions, email me at: jmasaviru@gmail.com
+  * [Linkedin](https://www.linkedin.com/in/james-masaviru-ba0a2117/)
