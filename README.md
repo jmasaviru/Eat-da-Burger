@@ -24,7 +24,7 @@ A restaurant application that allows the user to input names of burgers and "dev
   The user can run the live application through the [Heroku link](https://burgerh0use.herokuapp.com/) provided.
   The user can also run the application locally by first installing the application by cloning the repository onto their machine by running the `git clone` command, and then run `npm install` to install the required dependencies. The user should then navigate on the terminal to the folder where it is contained then run `node server.js`. The user may also make use of the provided schema and seeds files to populate some burgers.
 
-  ![Create Burger Screenshot](/public/assets/images/screenshot1.png)
+  ![Create Burger Screenshot](/public/assets/images/burgerhouse.gif)
 
   Once running, when the user submits a burger name, the app will dsplay the burger on the left of the page -- waiting to be devoured. When the user clicks the "devour it" button, the burger moves to the right side of the page. All burgers are stored in a databese.
   
