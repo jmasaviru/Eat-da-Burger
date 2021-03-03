@@ -1,5 +1,5 @@
-# Eat-da-Burger
-A restaurant application that allows the user to input names of burgers and "devour" those burgers at the click of a button. The user can also "re-devour" those burgers or input and "devour" new ones. 
+# Burger House
+[Burger House](https://burgerh0use.herokuapp.com/) is restaurant application that allows the user to input names of burgers and "devour" those burgers at the click of a button. The user can also "re-devour" those burgers or input and "devour" new ones. 
 ![Burger House Screenshot](/public/assets/images/screenshot0.png)
 
 ## Table of Contents
@@ -21,7 +21,7 @@ A restaurant application that allows the user to input names of burgers and "dev
   
 ## Usage
 
-  The user can run the live application through the [Heroku link](https://burgerh0use.herokuapp.com/) provided.
+  The user can run the live [Burger House](https://burgerh0use.herokuapp.com/) application through the [Heroku link](https://burgerh0use.herokuapp.com/) provided below.
   The user can also run the application locally by first installing the application by cloning the repository onto their machine by running the `git clone` command, and then run `npm install` to install the required dependencies. The user should then navigate on the terminal to the folder where it is contained then run `node server.js`. The user may also make use of the provided schema and seeds files to populate some burgers.
 
   ![Create Burger Screenshot](/public/assets/images/burgerhouse.gif)
